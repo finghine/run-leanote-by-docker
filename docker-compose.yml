@@ -1,0 +1,22 @@
+version: '2'
+
+services:
+  db:
+    restart: always
+    image: mongo:3.2.3
+    volumes:
+      - leanote_data:/data/db
+
+  server:
+    environment:
+      - SITE_URL="http://localhost:9000"
+    depends_on:
+      - db
+    restart: always
+    build: .
+    ports:
+     - "localhost:80:9000"
+    links:
+      - db:mongodb
+volumes:
+    leanote_data:
