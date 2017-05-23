@@ -1,3 +1,4 @@
+#!/bin/bash
 
 # 安装 mongodb客户端工具
 # 安装详见 ：https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
@@ -16,5 +17,5 @@ fi
 
 tar xvf $LEANOTE_INSTALL_DATA
 
-DB_IP=`sudo docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' leanote_db_1`
+DB_IP=`sudo docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' runleanotebydocker_db_1`
 mongorestore -h $DB_IP -d leanote --dir leanote_install_data 
