@@ -17,5 +17,5 @@ fi
 
 tar xvf $LEANOTE_INSTALL_DATA
 
-DB_IP=`sudo docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' runleanotebydocker_db_1`
+DB_IP=`sudo docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' run-leanote-by-docker_db_1`
 mongorestore -h $DB_IP -d leanote --dir leanote_install_data 
