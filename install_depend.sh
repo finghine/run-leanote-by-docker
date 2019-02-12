@@ -4,6 +4,7 @@ sudo apt-get update
 sudo apt-get install docker.io -y
 sudo apt-get install python-pip -y
 pip install docker-compose
+sudo gpasswd -a ${USER} docker
 
 # or 直接二进安装
 # 安装docker-compose
