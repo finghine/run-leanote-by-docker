@@ -1,6 +1,6 @@
 
 # 需要 docker 及 docker-compose
-sudo apt-get udpate 
+sudo apt-get update 
 sudo apt-get install docker.io -y
 sudo apt-get install python-pip -y
 pip install docker-compose
